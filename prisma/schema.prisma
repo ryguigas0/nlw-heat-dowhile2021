@@ -1,0 +1,11 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite" // É bom com tráfego pequeno ou médio
+  url      = "file:./dev.db" // Não precisa criar
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
