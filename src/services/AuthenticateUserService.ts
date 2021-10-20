@@ -65,8 +65,6 @@ class AuthenticateUserService {
             })
         }
 
-
-        const jwt_secret = process.env.JWT_SECRET as String
         const token = sign(
             // What the consumer will recieve
             {
