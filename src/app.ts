@@ -24,5 +24,4 @@ app
     .use(express.json())
     .use(router)
 
-serverHttp.listen(4000, () =>
-    console.log("☠️  🐵 🐲 🦍 🦧 Server tá SUS em http://localhost:4000/github"))
+export {serverHttp, io}

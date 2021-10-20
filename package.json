@@ -4,7 +4,7 @@
   "description": "NLW heat nodejs part",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --rs src/app.ts"
+    "dev": "ts-node-dev --rs src/server.ts"
   },
   "repository": {
     "type": "git",

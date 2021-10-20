@@ -1,6 +1,7 @@
 import { Router } from "express"
 import { AuthenticateUserController } from "./controllers/AuthenticateUserController"
 import { CreateMessageController } from "./controllers/CreateMessageController"
+import { GetLatestMessagesController } from "./controllers/GetLastestMessagesController"
 import { ensureAuthenticated } from "./middlewares/EnsureAuthenticated"
 
 const router = Router()
@@ -17,6 +18,7 @@ router
     .post("/messages",
         ensureAuthenticated, // Runs the middleware
         new CreateMessageController().handle)
+    .get("/messages/latest", new GetLatestMessagesController().handle)
 
 
 export { router }
