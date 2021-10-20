@@ -1,7 +1,9 @@
+import axios from "axios"
+import prismaClient from "../prisma"
+import { sign } from "jsonwebtoken"
+
 // Recieve code
 // Recover github access token
-
-import axios from "axios"
 
 // Is user in DB?
 // Yes -> gen token
@@ -10,11 +12,22 @@ import axios from "axios"
 // Return token + user info
 
 
+interface AccessTokenResponse {
+    access_token: string
+}
+
+interface UserResponse {
+    avatar_url: string
+    login: string
+    id: number
+    name: string
+}
+
 class AuthenticateUserService {
     async execute(code: string) {
         const url = `https://github.com/login/oauth/access_token`
 
-        const resp = await axios.post(url, null,
+        const { data: accessTokenResponse } = await axios.post<AccessTokenResponse>(url, null,
             {
                 params: {
                     client_id: process.env.GITHUB_CLIENT_ID,
@@ -26,8 +39,51 @@ class AuthenticateUserService {
                 }
             }
         )
-        
-        return resp.data
+
+        const resp = await axios.get<UserResponse>("https://api.github.com/user", {
+            headers: {
+                authorization: `Bearer ${accessTokenResponse.access_token}`
+            }
+        })
+
+        const { avatar_url, login, id, name } = resp.data
+
+        let user = await prismaClient.user.findFirst({
+            where: {
+                github_id: id
+            }
+        })
+
+        if (!user) {
+            user = await prismaClient.user.create({
+                data: {
+                    github_id: id,
+                    avatar_url,
+                    login,
+                    name
+                }
+            })
+        }
+
+
+        const jwt_secret = process.env.JWT_SECRET as String
+        const token = sign(
+            // What the consumer will recieve
+            {
+                user: {
+                    name: user.name,
+                    avatar_url: user.avatar_url,
+                    id: user.id
+                },
+            },
+            `${process.env.JWT_SECRET}`,
+            {
+                subject: user.id,
+                expiresIn: "1d"
+            }
+        )
+
+        return { token, user }
     }
 }
 

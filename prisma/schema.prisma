@@ -2,10 +2,20 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 datasource db {
-  provider = "sqlite" // É bom com tráfego pequeno ou médio
-  url      = "file:./dev.db" // Não precisa criar
+  provider = "sqlite"
+  url      = "file:./dev.db"
 }
 
 generator client {
   provider = "prisma-client-js"
+}
+
+model User {
+  id  String @id @default(uuid())
+  name String
+  github_id Int
+  avatar_url String
+  login String
+
+  @@map("users")
 }

@@ -9,4 +9,4 @@ app
     .use(express.json())
     .use(router)
 
-app.listen(4000, () => console.log("☠️  🐵 🐲 🦍 🦧 Server tá SUS em http://localhost:4000/"))
+app.listen(4000, () => console.log("☠️  🐵 🐲 🦍 🦧 Server tá SUS em http://localhost:4000/github"))
