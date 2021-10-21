@@ -15,10 +15,10 @@ NLW heat fullstack project with
     - [ts-node-dev](https://github.com/wclr/ts-node-dev) for hot-reload when changes are made during development
 - [Github authentication](https://github.com/settings/developers)
     - Simple and powerful
-- [Socket.IO](https://github.com/socketio/socket.io) for websockets
+- [Socket.IO](https://github.com/socketio/socket.io) for websockets and realtime messages
 
-# Elixir
-
-# Reactjs
+# Reactjs https://youtu.be/_MIXek7GYmg?t=205
+- [Figma layout](https://www.figma.com/community/file/1031699316177416916?preview=fullscreen)
 
 # React Native
+# Elixir
