@@ -1,9 +1,9 @@
 # DO WHILE 2021
 NLW heat fullstack project with 
 - [Elixir](https://elixir-lang.org/)
-- [Nodejs](https://nodejs.org/en/)
-- [Reactjs](https://reactjs.org/) 
-- [React native](https://reactnative.dev/)
+- [Nodejs](https://nodejs.org/en/) as the backend
+- [Reactjs](https://reactjs.org/)  as the website
+- [React native](https://reactnative.dev/) as the phone app
 
 # Nodejs
 - [Express](https://expressjs.com/) as the web framework
@@ -19,6 +19,7 @@ NLW heat fullstack project with
 
 # Reactjs https://youtu.be/_MIXek7GYmg?t=205
 - [Figma layout](https://www.figma.com/community/file/1031699316177416916?preview=fullscreen)
+- [Vite](https://vitejs.dev/guide/) as the fast build tool with hot reloads
 
 # React Native
 # Elixir
