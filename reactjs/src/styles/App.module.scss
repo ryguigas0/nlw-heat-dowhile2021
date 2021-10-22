@@ -1,0 +1,10 @@
+.contentWrapper{
+    max-width: 1200px;
+    height: 100vh; // Occupy the whole screen
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 453px; // The banner-girl.png width
+    column-gap: 120px;
+    position: relative;
+}
