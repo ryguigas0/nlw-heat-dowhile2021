@@ -17,9 +17,11 @@ NLW heat fullstack project with
     - Simple and powerful
 - [Socket.IO](https://github.com/socketio/socket.io) for websockets and realtime messages
 
-# Reactjs https://youtu.be/_MIXek7GYmg?t=205
+# Reactjs
 - [Figma layout](https://www.figma.com/community/file/1031699316177416916?preview=fullscreen)
 - [Vite](https://vitejs.dev/guide/) as the fast build tool with hot reloads
+- [Sass](https://sass-lang.com/guide) as making css more robust and awsome with nesting and other stuff
+- [react-icons](https://github.com/react-icons/react-icons) for cool icons
 
 # React Native
 # Elixir
