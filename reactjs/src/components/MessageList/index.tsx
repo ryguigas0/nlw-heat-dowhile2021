@@ -23,7 +23,6 @@ export function MessageList() {
                 // Shuffling code from: https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html
                 .sort(() => Math.random() - 0.5) // Sorts with random order
                 .slice(0, 3) // Takes the first 3
-            // console.log(rand3Msgs)
             updateMessages(rand3Msgs) // Render
         })
     }, []) // Empty array -> run only once

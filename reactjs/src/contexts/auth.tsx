@@ -21,7 +21,8 @@ type AuthResponse = {
 type User = {
     id: string,
     login: string,
-    avatar_url: string
+    avatar_url: string,
+    name:string
 }
 
 type AuthContextData = {
@@ -60,7 +61,7 @@ export function AuthProvider(props: AuthProvider) {
             // Places the authorization token for accessing user profile
             api.defaults.headers.common.authorization = `Bearer ${token}`
 
-            api.get("profile").then(resp => console.log(resp.data))
+            api.get("profile").then(resp => updateUser(resp.data as User))
         }
     }, [])
 
@@ -71,7 +72,6 @@ export function AuthProvider(props: AuthProvider) {
 
         if (hasGithubCode) {
             const [urlWithoutCode, userCode] = url.split('?code=')
-            // console.log(userCode)
 
             window.history.pushState({}, '', urlWithoutCode)
 
