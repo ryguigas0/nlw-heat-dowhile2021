@@ -22,6 +22,7 @@ NLW heat fullstack project with
 - [Vite](https://vitejs.dev/guide/) as the fast build tool with hot reloads
 - [Sass](https://sass-lang.com/guide) as making css more robust and awsome with nesting and other stuff
 - [react-icons](https://github.com/react-icons/react-icons) for cool icons
+- [socket-client](https://github.com/socketio/socket.io-client) for recieving websocket events from node backend
 
 # React Native
 # Elixir
