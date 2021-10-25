@@ -11,6 +11,7 @@ NLW heat fullstack project with
 - [Prisma](https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project/relational-databases-typescript-postgres) as the hyped ORM
     - `npx prisma migrate` -> Create and migrate
     - `npx prisma studio` -> Check what you db contains
+- [PostgreSQL](https://www.postgresql.org/docs/current/intro-whatis.html) as the open source database
 - [Typescript](https://www.typescriptlang.org/) the Javascript superset
     - [ts-node-dev](https://github.com/wclr/ts-node-dev) for hot-reload when changes are made during development
 - [Github authentication](https://github.com/settings/developers)
@@ -25,4 +26,9 @@ NLW heat fullstack project with
 - [socket-client](https://github.com/socketio/socket.io-client) for recieving websocket events from node backend
 
 # React Native
+- [Expo](https://docs.expo.dev/) the universal react app building framework
+- [Typescript](https://www.typescriptlang.org/) the Javascript superset
+
 # Elixir
+- [Phoenix](https://hexdocs.pm/phoenix/overview.html) as the hyper responsive MVC web framework
+- [PostgreSQL](https://www.postgresql.org/docs/current/intro-whatis.html) as the open source database
