@@ -9,3 +9,17 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias ElixirHeatTags.{Message, Repo}
+
+new_msg = %{
+  content: "DOWHILE!!!!",
+  email: "xewowir703@fretice.com",
+  username: "ryguigas0"
+}
+
+new_msg
+|> Message.changeset()
+|> Repo.insert!()
+
+IO.inspect(:ok, label: "db seeds status")

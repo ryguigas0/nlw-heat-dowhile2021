@@ -31,4 +31,5 @@ NLW heat fullstack project with
 
 # Elixir
 - [Phoenix](https://hexdocs.pm/phoenix/overview.html) as the hyper responsive MVC web framework
+- [Ecto](https://hexdocs.pm/ecto/getting-started.html) as not your typical ORM
 - [PostgreSQL](https://www.postgresql.org/docs/current/intro-whatis.html) as the open source database
