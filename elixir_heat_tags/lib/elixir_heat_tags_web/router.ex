@@ -6,7 +6,8 @@ defmodule ElixirHeatTagsWeb.Router do
   end
 
   scope "/api", ElixirHeatTagsWeb do
-    pipe_through :api
+    pipe_through :api # Filters the request in the scope
+    post "/message", MessagesController, :create
   end
 
   # Enables LiveDashboard only for development

@@ -13,4 +13,12 @@ defmodule ElixirHeatTagsWeb.ErrorView do
   def template_not_found(template, _assigns) do
     %{errors: %{detail: Phoenix.Controller.status_message_from_template(template)}}
   end
+
+  def render("bad_request.json", %{error: %Ecto.Changeset{} = invalid_changeset}) do
+    Ecto.Changeset.traverse_errors(invalid_changeset, fn {msg, opts} ->
+      Regex.replace(~r"%{(\w+)}", msg, fn _, key ->
+        opts |> Keyword.get(String.to_existing_atom(key), key) |> to_string()
+      end)
+    end)
+  end
 end

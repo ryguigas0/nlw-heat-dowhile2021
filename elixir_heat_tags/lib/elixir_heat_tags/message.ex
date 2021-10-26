@@ -5,6 +5,8 @@ defmodule ElixirHeatTags.Message do
 
   @fields [:content, :username, :email]
 
+  @derive {Jason.Encoder, only: [:id] ++ @fields} # What to render in json
+
   schema "messages" do
     field :content, :string
     field :username, :string
