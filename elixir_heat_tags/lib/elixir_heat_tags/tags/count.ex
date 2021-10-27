@@ -7,6 +7,7 @@ defmodule ElixirHeatTags.Tags.Count do
     |> Task.async_stream(&count_words(&1.content))
     # Lazy operator -> Run when result is required
     |> Enum.reduce(%{}, &merge_frequencies/2)
+    |>IO.inspect(label: "Words counted")
   end
 
   defp merge_frequencies({:ok, map1}, map2) do

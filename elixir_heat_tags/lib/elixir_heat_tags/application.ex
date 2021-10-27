@@ -14,9 +14,10 @@ defmodule ElixirHeatTags.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: ElixirHeatTags.PubSub},
       # Start the Endpoint (http/https)
-      ElixirHeatTagsWeb.Endpoint
+      ElixirHeatTagsWeb.Endpoint,
       # Start a worker by calling: ElixirHeatTags.Worker.start_link(arg)
       # {ElixirHeatTags.Worker, arg}
+      ElixirHeatTags.Scheduler
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

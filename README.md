@@ -1,7 +1,7 @@
 # DO WHILE 2021
 NLW heat fullstack project with 
-- [Elixir](https://elixir-lang.org/)
 - [Nodejs](https://nodejs.org/en/) as the backend
+- [Elixir](https://elixir-lang.org/) as the backend fro tag counting
 - [Reactjs](https://reactjs.org/)  as the website
 - [React native](https://reactnative.dev/) as the phone app
 
@@ -33,3 +33,9 @@ NLW heat fullstack project with
 - [Phoenix](https://hexdocs.pm/phoenix/overview.html) as the hyper responsive MVC web framework
 - [Ecto](https://hexdocs.pm/ecto/getting-started.html) as not your typical ORM
 - [PostgreSQL](https://www.postgresql.org/docs/current/intro-whatis.html) as the open source database
+- [Quantum](https://hexdocs.pm/quantum/readme.html) for running jobs periodically
+- Challenges!!
+    - Read all unique emails
+    - Send the daily tags report with [Bamboo](https://hexdocs.pm/bamboo/readme.html)
+    - Save the report on the database
+    - Add fallback controllers and error validation
